@@ -7,4 +7,16 @@
 
 from resources import randlist
 
-print(randlist)
+# print(randlist)
+
+user_list = list(map(int, input().split()))
+
+print(user_list)
+
+print(max(user_list))
+
+product_all = 1
+for i in user_list:
+     product_all *= i
+     
+print(product_all)
