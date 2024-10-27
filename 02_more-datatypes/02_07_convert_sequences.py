@@ -5,3 +5,17 @@
 # - Convert the list back into a tuple.
 
 string = "codingnomads"
+
+my_tuple_list = list(tuple(string))
+my_tuple_list[0] = 'k'
+my_tuple = tuple(my_tuple_list)
+print(my_tuple)
+
+my_str = ''.join([x for x in my_tuple_list])
+
+# another way of doing
+# my_str = ''
+# for x in my_tuple_list:
+#      my_str += x
+
+print(my_str)
