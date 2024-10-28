@@ -22,22 +22,37 @@ my_list = randlist
 """First Way"""
 
 sorted_my_list = sorted(my_list)
-even_list= []
-odd_list = []
+print(sorted_my_list)
+
+my_tuple_list=[]
+if len(sorted_my_list)%2!=0:
+     sorted_my_list.append(0)
+     
+"""First way"""
+
+temp_list=[] 
 for num in sorted_my_list:
-     if num%2==0:
-          even_list.append(num)
+     if len(temp_list)==2:
+          print(f'if:{num}')
+          tuple_list=tuple(temp_list)
+          print(f'tuple_list:{tuple_list}')
+          my_tuple_list.append(tuple_list)
+          temp_list.clear()
+          temp_list.append(num)
      else:
-          odd_list.append(num)
-          
-my_tuple_list = [tuple(even_list),tuple(odd_list)]
+          print(f'else:{num}')
+          temp_list.append(num)
+          if sorted_my_list[-1]==num:
+               tuple_list=tuple(temp_list)
+               print(f'tuple_list:{tuple_list}')
+               my_tuple_list.append(tuple_list)
 
-# print(my_tuple_list)
+"""Second way"""
 
-"""Second Way"""
-my_anothe_tuple_list = [
-     tuple(num for num in sorted(my_list) if num%2==0) ,
-     tuple(num for num in sorted(my_list) if num%2!=0)
-]
+for i in range(0,len(sorted_my_list)-1,2):
+     tuple_list=(sorted_my_list[i],sorted_my_list[i+1])
+     my_tuple_list.append(tuple_list)
 
-print(my_anothe_tuple_list)
+
+print(my_tuple_list)
+
