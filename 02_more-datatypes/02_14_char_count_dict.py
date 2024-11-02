@@ -4,3 +4,17 @@
 #
 # user_input = "hello"
 # result = {"h": 1, "e": 1, "l": 2, "o": 1}
+
+
+# take user input in string
+input_str = input("Enter a string: ")
+# create a empty dictionary
+result = {}
+# iterate the string
+for c in input_str:
+     if c in result: # if any string repeat multiple time then add them
+          result[c] += 1
+     else:
+          result[c] = 1
+
+print(result)
