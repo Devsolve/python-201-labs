@@ -1,1 +1,0 @@
-After defining your data_path, you can use it as usual inside your context manager, where you're providing the file name. With .joinpath(), you're adding the file name to the Path() object, which provides open() with the location of the file you want to open. The rest of the code stays exactly the same.

@@ -1,2 +1,0 @@
-Practice reading and writing to files with your lab exercises, and think about something you'd like to build that involves reading from and writing to files. 
- Take a note in your journal to keep track of your ideas.
